@@ -1,6 +1,7 @@
 /* 確保檔案為 UTF-8 BOM 格式 */
 :root {
-    --cyclelife-bg: #ffffff;
+    --cyclelife-bg: #E0E7E0;
+    /* 鼠尾草綠 */
     --cyclelife-border: #e5e7eb;
     --cyclelife-accent: #10b981;
     /* 調整為更鮮豔的綠色 */
@@ -11,8 +12,13 @@
     /* Hover 時的淺灰背景 */
 }
 
-.navbar-cyclelife {
+body {
     background-color: var(--cyclelife-bg) !important;
+}
+
+.navbar-cyclelife {
+    background-color: #ffffff !important;
+    /* 強制導航列為白色 */
     border-bottom: 1px solid var(--cyclelife-border);
     padding: 0.75rem 2.5rem;
     font-family: 'Lexend', 'Noto Sans', sans-serif;
@@ -91,7 +97,8 @@
 .navbar-cyclelife .dropdown-menu {
     background-color: #ffffff;
     border: 1px solid var(--cyclelife-border);
-    margin-top: 0.5rem;
+    margin-top: 0;
+    /* 修改為 0，解決滑鼠滑過時斷開的問題 */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     /* 更柔和的陰影 */
     border-radius: 0.5rem;
@@ -152,4 +159,14 @@
         padding-left: 2rem;
         color: var(--cyclelife-text-main);
     }
+}
+
+/* Stats Card Hover Effect */
+.stats-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
 }

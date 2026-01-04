@@ -1,33 +1,114 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "About Me";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<!-- Hero Section -->
+<div class="row align-items-center py-5 mb-5 rounded-4 shadow-sm bg-white" style="border: 1px solid var(--cyclelife-border);">
+    <div class="col-lg-7 p-5">
+        <h5 class="fw-bold mb-3" style="color: var(--cyclelife-accent);">HELLO, I'M MICHAEL</h5>
+        <h1 class="display-4 fw-bold mb-4" style="color: var(--cyclelife-text-main);">Passionate Developer &<br>Cycling Enthusiast</h1>
+        <p class="lead mb-4" style="color: var(--cyclelife-text-muted);">
+            Building digital experiences by day, conquering mountain peaks by weekend. 
+            I combine clean code with the endurance of a long-distance cyclist.
+        </p>
+        <div class="d-flex gap-3">
+            <a href="#contact" class="btn btn-lg fw-bold px-4" style="background-color: var(--cyclelife-text-main); color: white;">Get in Touch</a>
+            <a href="#projects" class="btn btn-lg fw-bold px-4" style="border: 2px solid var(--cyclelife-text-main); color: var(--cyclelife-text-main);">My Projects</a>
+        </div>
     </div>
-</main>
+    <div class="col-lg-5 p-0 text-center position-relative overflow-hidden rounded-end-4 d-none d-lg-block" style="height: 500px;">
+        <div class="w-100 h-100" style="background-image: url('https://images.unsplash.com/photo-1559904269-07469a456740?q=80&w=2069&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="row mb-5 text-center g-4">
+    <div class="col-md-3">
+        <div class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 stats-card">
+            <h2 class="fw-bold mb-0" style="color: var(--cyclelife-accent);">5+</h2>
+            <p class="text-muted mb-0">Years Experience</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 stats-card">
+            <h2 class="fw-bold mb-0" style="color: var(--cyclelife-accent);">50+</h2>
+            <p class="text-muted mb-0">Projects Completed</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 stats-card">
+            <h2 class="fw-bold mb-0" style="color: var(--cyclelife-accent);">12k</h2>
+            <p class="text-muted mb-0">Km Ridden</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 stats-card">
+            <h2 class="fw-bold mb-0" style="color: var(--cyclelife-accent);">15</h2>
+            <p class="text-muted mb-0">KOMs Achieved</p>
+        </div>
+    </div>
+</div>
+
+<!-- Skills & About Section -->
+<div class="row align-items-center mb-5">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+        <h3 class="fw-bold mb-4" style="color: var(--cyclelife-text-main);">My Expertise</h3>
+        
+        <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="fw-bold">Full Stack Development</span>
+                <span style="color: var(--cyclelife-accent);">90%</span>
+            </div>
+            <div class="progress" style="height: 10px;">
+                <div class="progress-bar rounded-pill" role="progressbar" style="width: 90%; background-color: var(--cyclelife-accent);" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="fw-bold">UI/UX Design</span>
+                <span style="color: var(--cyclelife-accent);">85%</span>
+            </div>
+            <div class="progress" style="height: 10px;">
+                <div class="progress-bar rounded-pill" role="progressbar" style="width: 85%; background-color: var(--cyclelife-text-main);" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="fw-bold">Data Analysis</span>
+                <span style="color: var(--cyclelife-accent);">80%</span>
+            </div>
+            <div class="progress" style="height: 10px;">
+                <div class="progress-bar rounded-pill" role="progressbar" style="width: 80%; background-color: var(--cyclelife-text-muted);" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-5 offset-lg-1">
+        <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #fff;">
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+                     <div class="rounded-circle p-3 me-3" style="background-color: var(--cyclelife-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--cyclelife-accent)" class="bi bi-code-slash" viewBox="0 0 16 16">
+                          <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                        </svg>
+                     </div>
+                     <h4 class="fw-bold mb-0">Clean Architecture</h4>
+                </div>
+                <p class="text-muted mb-4">
+                    I believe that code should be as elegant as a well-tuned bike. 
+                    Structure, readability, and performance are my top priorities.
+                </p>
+                <div class="d-flex align-items-center">
+                     <div class="rounded-circle p-3 me-3" style="background-color: var(--cyclelife-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--cyclelife-accent)" class="bi bi-bicycle" viewBox="0 0 16 16">
+                           <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                        </svg>
+                     </div>
+                     <h4 class="fw-bold mb-0">Endurance Mindset</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
