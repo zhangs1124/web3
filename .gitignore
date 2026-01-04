@@ -1,0 +1,20 @@
+[user]
+	name = michael
+	email = michael@example.com
+
+# Visual Studio gitignore
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Packages
+packages/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

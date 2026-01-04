@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Services";
+}
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h2 class="mb-3 fw-bold text-dark">Our Services</h2>
+        <p class="text-muted">Explore our wide range of cycling services designed for you.</p>
+    </div>
+</div>
+
+<!-- Search Query Form Section -->
+<div class="card shadow-sm mb-4 border-0" style="background-color: var(--cyclelife-bg); border: 1px solid var(--cyclelife-border);">
+    <div class="card-body">
+        <h5 class="card-title mb-3 fw-bold">Find Services</h5>
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="serviceName" class="form-label">Service Name</label>
+                <input type="text" class="form-control" id="serviceName" placeholder="e.g. Full Tune-up">
+            </div>
+            <div class="col-md-3">
+                <label for="serviceType" class="form-label">Type</label>
+                <select id="serviceType" class="form-select">
+                    <option selected>All Types</option>
+                    <option>Maintenance</option>
+                    <option>Rental</option>
+                    <option>Training</option>
+                    <option>Fitting</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="form-select">
+                    <option selected>Any</option>
+                    <option>Available</option>
+                    <option>Booked</option>
+                </select>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100 fw-bold" style="background-color: var(--cyclelife-accent); border-color: var(--cyclelife-accent); color: var(--cyclelife-text-main);">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Data Table Section -->
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="servicesTable" class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Service Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        // Generating Dummy Data
+                        var serviceTypes = new[] { "Maintenance", "Rental", "Training", "Fitting" };
+                        var statuses = new[] { "Available", "Booked", "Maintenance" };
+                        var random = new Random();
+
+                        for (int i = 1; i <= 15; i++)
+                        {
+                            var type = serviceTypes[random.Next(serviceTypes.Length)];
+                            var status = statuses[random.Next(statuses.Length)];
+                            var price = random.Next(20, 500);
+                            
+                            <tr>
+                                <td>#@i.ToString("D4")</td>
+                                <td class="fw-bold">Service Item @i</td>
+                                <td><span class="badge bg-light text-dark border">@type</span></td>
+                                <td>$@price</td>
+                                <td>@(random.Next(30, 120)) mins</td>
+                                <td>
+                                    @if(status == "Available") {
+                                        <span class="badge bg-success bg-opacity-10 text-success">@status</span>
+                                    } else if (status == "Booked") {
+                                        <span class="badge bg-warning bg-opacity-10 text-warning">@status</span>
+                                    } else {
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">@status</span>
+                                    }
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#servicesTable').DataTable({
+                language: {
+                    // Using Traditional Chinese language file
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/zh-HANT.json'
+                },
+                columnDefs: [
+                    { orderable: false, targets: 6 } // Disable sorting on Actions column
+                ],
+                pageLength: 10
+            });
+        });
+    </script>
+}

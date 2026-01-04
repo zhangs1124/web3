@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-5 col-lg-4">
+        <div class="card shadow-lg border-0 rounded-4" style="background-color: #ffffff;">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <div class="d-inline-block rounded-circle p-3 mb-3" style="background-color: var(--cyclelife-bg); color: var(--cyclelife-accent);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="fw-bold mb-1" style="color: var(--cyclelife-text-main);">Welcome Back</h3>
+                    <p class="text-muted">Please sign in to continue</p>
+                </div>
+
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                            <label class="form-check-label text-muted small" for="rememberMe">
+                                Remember me
+                            </label>
+                        </div>
+                        <a href="#" class="small text-decoration-none" style="color: var(--cyclelife-accent);">Forgot password?</a>
+                    </div>
+
+                    <button class="btn w-100 py-2 fw-bold text-white mb-3" type="submit" style="background-color: var(--cyclelife-text-main);">Sign In</button>
+                    
+                    <div class="text-center">
+                        <span class="text-muted small">Don't have an account?</span>
+                        <a href="#" class="text-decoration-none fw-bold small ms-1" style="color: var(--cyclelife-accent);">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

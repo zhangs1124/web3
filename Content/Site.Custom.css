@@ -1,0 +1,155 @@
+/* 確保檔案為 UTF-8 BOM 格式 */
+:root {
+    --cyclelife-bg: #ffffff;
+    --cyclelife-border: #e5e7eb;
+    --cyclelife-accent: #10b981;
+    /* 調整為更鮮豔的綠色 */
+    --cyclelife-text-main: #1f2937;
+    /* 主要文字顏色 */
+    --cyclelife-text-muted: #6b7280;
+    --cyclelife-hover-bg: #f3f4f6;
+    /* Hover 時的淺灰背景 */
+}
+
+.navbar-cyclelife {
+    background-color: var(--cyclelife-bg) !important;
+    border-bottom: 1px solid var(--cyclelife-border);
+    padding: 0.75rem 2.5rem;
+    font-family: 'Lexend', 'Noto Sans', sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* 加入輕微陰影增加層次感 */
+}
+
+.navbar-cyclelife .navbar-brand {
+    color: var(--cyclelife-text-main) !important;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo icon color update */
+.navbar-cyclelife .navbar-brand svg {
+    color: var(--cyclelife-accent);
+}
+
+.navbar-cyclelife .nav-link {
+    color: var(--cyclelife-text-muted) !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-cyclelife .nav-link:hover,
+.navbar-cyclelife .nav-link:focus,
+.navbar-cyclelife .nav-link.show {
+    color: var(--cyclelife-text-main) !important;
+}
+
+.btn-notifications {
+    background-color: transparent !important;
+    color: var(--cyclelife-text-muted) !important;
+    border: 1px solid var(--cyclelife-border) !important;
+    border-radius: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-notifications:hover {
+    background-color: var(--cyclelife-hover-bg) !important;
+    color: var(--cyclelife-text-main) !important;
+    border-color: var(--cyclelife-text-muted) !important;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--cyclelife-border);
+}
+
+.navbar-cyclelife .navbar-toggler {
+    border-color: var(--cyclelife-border);
+}
+
+.navbar-cyclelife .navbar-toggler-icon {
+    filter: none;
+    /* 移除反轉，使用預設深色圖示（因為背景變白了） */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(31, 41, 55, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dropdown styles for light theme */
+.navbar-cyclelife .dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid var(--cyclelife-border);
+    margin-top: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* 更柔和的陰影 */
+    border-radius: 0.5rem;
+}
+
+.navbar-cyclelife .dropdown-item {
+    color: var(--cyclelife-text-main);
+    font-size: 0.875rem;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.navbar-cyclelife .dropdown-item:hover {
+    background-color: var(--cyclelife-hover-bg);
+    color: var(--cyclelife-accent);
+}
+
+.navbar-cyclelife .dropdown-divider {
+    border-top: 1px solid var(--cyclelife-border);
+    margin: 0.5rem 0;
+}
+
+/* Hover to open dropdown on desktop */
+@media (min-width: 992px) {
+    .navbar-cyclelife .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+        animation: fadeIn 0.2s ease-in-out;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 991.98px) {
+    .navbar-cyclelife {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-cyclelife .dropdown-menu {
+        background-color: var(--cyclelife-hover-bg);
+        border: none;
+        box-shadow: none;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-cyclelife .dropdown-item {
+        padding-left: 2rem;
+        color: var(--cyclelife-text-main);
+    }
+}
